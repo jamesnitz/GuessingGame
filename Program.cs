@@ -13,10 +13,13 @@ namespace GuessingGame {
                 if (userGuessInt == secretNumber) {
                     Console.WriteLine ($"You guessed it! It was {secretNumber}");
                     return;
-                } else if (userGuessInt < secretNumber) {
+                } else if (userGuessInt < secretNumber && i != 2) {
                     Console.WriteLine ("Nope guess higher");
-                } else if (userGuessInt > secretNumber) {
+                } else if (userGuessInt > secretNumber && i != 2) {
                     Console.WriteLine ("Nope guess lower");
+
+                } else {
+                    Console.WriteLine ("You're WRONGGGGGG");
 
                 }
             }
